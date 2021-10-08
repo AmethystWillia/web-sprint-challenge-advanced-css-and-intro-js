@@ -81,6 +81,7 @@ nav span{
     border-left:3px solid #626262;
 
 }
+
 /*Title Section Styles*/
 .title-container{
     display:flex;
@@ -119,6 +120,7 @@ button:hover{
     color:white;
     box-shadow: 2px 2px 1px white;
 }
+
 /*Artists Section Styles */
 .artists-container{
     display:flex;
@@ -158,5 +160,25 @@ button:hover{
 
     .title-container hr {
         width:100%;
+    }
+
+    /* Artist Section Styles */
+    .artists-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .artist {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .artist a {
+        font-size: 1.8rem;
+    }
+
+    .artist img {
+        height: 35vh;
+        width: 60%;
     }
 }
