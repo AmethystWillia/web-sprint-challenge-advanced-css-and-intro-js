@@ -143,9 +143,14 @@ button:hover{
     /* Header Section Styles */
     nav{
         width: 50%;
+        align-items: center;
     }
     nav a {
         font-size: 2rem;
+    }
+    nav span {
+        border-left:2px solid #626262;
+        height: 70%;
     }
 
     /* Title Section Styles */
