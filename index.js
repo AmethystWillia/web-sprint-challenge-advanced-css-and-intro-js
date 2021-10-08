@@ -208,17 +208,17 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-//console.log(artists[0]);
+console.log(artists[0]);
 
 //(2) Bio of the third artist (2nd index) in the array 
-//console.log(artists[3].bio);
+console.log(artists[3].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 artists[8].name = 'Vincent Van Gogh';
-//console.log(artists[8]);
+console.log(artists[8]);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -232,7 +232,7 @@ function getArtistByIndex(array, index) {
   return `the artist at index ${array[index].id} is ${array[index].name}`
 }
 
-//console.log(getArtistByIndex(artists, 0));
+console.log(getArtistByIndex(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -248,9 +248,11 @@ function get20s(array) {
   let yearsSeperate = [];
   for (let i = 0; i < array.length; i++) {
     yearsSeperate.push(array[i].years.split(' '));
-    
+    if (yearsSeperate[i][0].includes('19') && yearsSeperate[i][2].includes('19')) {
+      livedIn20s.push(array[i].name);
+      }
     }
-  return yearsSeperate;
+  return livedIn20s;
 }
 
 console.log(get20s(artists));
@@ -269,7 +271,7 @@ function removeArtist(array, index) {
   return array.length;
 }
 
-//console.log(removeArtist(artists, 0));
+console.log(removeArtist(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -292,7 +294,7 @@ function addArtist(array, id, name, years, genre, nationality, bio) {
   return array;
 }
 
-//console.log(addArtist(artists, '20', 'Amethyst Williams', '2001 - Present', 'Web Design', 'Boring American', "I don't actually want to write much about myself so I won't to keep the code short"));
+console.log(addArtist(artists, '20', 'Amethyst Williams', '2001 - Present', 'Web Design', 'Boring American', "I don't actually want to write much about myself so I won't to keep the code short"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -311,7 +313,7 @@ function lotsOfArt(array) {
   return oneHundo;
 }
 
-//console.log(lotsOfArt(artists))
+console.log(lotsOfArt(artists))
 
 /* ***** END OF TASKS ***** */
 
